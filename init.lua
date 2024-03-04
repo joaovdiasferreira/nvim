@@ -42,14 +42,17 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     "mfussenegger/nvim-dap-python",
     "rcarriga/nvim-dap-ui",
-    "jay-babu/mason-nvim-dap.nvim",
-},
+  },
+
 
 })
 
 --set theme
 vim.cmd[[colorscheme tokyonight]]
 
+
 require("core.plugins-config.mason")
 require("core.plugins-config.dap")
+require("core.plugins-config.dapui")
+
 
