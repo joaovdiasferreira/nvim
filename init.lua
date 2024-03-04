@@ -1,3 +1,6 @@
+--main configurations of nvim
+
+--install lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -11,7 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
+--def mapleader as space
 vim.g.mapleader = " "
 
 require("lazy").setup({
@@ -19,7 +22,7 @@ require("lazy").setup({
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
 
-
+--themes
   {
   "folke/tokyonight.nvim",
   lazy = false,
@@ -27,16 +30,26 @@ require("lazy").setup({
   opts = {},
   },
 
+--mason and LSP	
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    "mfussenegger/nvim-dap",
   },
 
+--DAP 
+  {
+    "mfussenegger/nvim-dap",
+    "mfussenegger/nvim-dap-python",
+    "rcarriga/nvim-dap-ui",
+    "jay-babu/mason-nvim-dap.nvim",
+},
 
 })
 
+--set theme
 vim.cmd[[colorscheme tokyonight]]
 
 require("core.plugins-config.mason")
+require("core.plugins-config.dap")
+
