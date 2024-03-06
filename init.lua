@@ -45,14 +45,32 @@ require("lazy").setup({
   },
 
 
+--treesitter
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+
+
+--CMP
+  {
+     'hrsh7th/cmp-nvim-lsp',
+     'hrsh7th/cmp-buffer',
+     'hrsh7th/cmp-path',
+     'hrsh7th/cmp-cmdline',
+     'hrsh7th/nvim-cmp',
+  --snips
+     'L3MON4D3/LuaSnip',
+     'saadparwaiz1/cmp_luasnip',
+     'rafamadriz/friendly-snippets',
+},
+
+
 })
 
 --set theme
 vim.cmd[[colorscheme tokyonight]]
 
-
 require("core.plugins-config.mason")
+require("core.plugins-config.cmp")
+require("luasnip.loaders.from_vscode").lazy_load()
+require("core.settings")
 require("core.plugins-config.dap")
 require("core.plugins-config.dapui")
-
-
