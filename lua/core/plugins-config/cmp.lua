@@ -50,8 +50,8 @@ mapping = cmp.mapping.preset.insert({
 
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For vsnip users.
+    { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },
     }),
@@ -88,3 +88,6 @@ require("lspconfig")['pyright'].setup {
   capabilities = capabilities,
 }
 
+
+require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_snipmate").lazy_load()

@@ -37,6 +37,7 @@ Map("n", "<C-k>", "<C-w>k")
 Map("n", "<C-l>", "<C-w>l")
 
 
---Map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
---Map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
---Map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
+--nvim-tree
+Map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
+Map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
+Map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file

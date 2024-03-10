@@ -13,7 +13,7 @@ require("mason").setup({
 
 require("mason-lspconfig").setup()
 
-require("lspconfig").lua_ls.setup{
+lspconfig.lua_ls.setup{
 	settings = {
 		Lua = {
 			diagnostics = { globals	= {'vim'}}
@@ -22,3 +22,4 @@ require("lspconfig").lua_ls.setup{
 }
 
 lspconfig.clangd.setup{}
+lspconfig.pyright.setup{}

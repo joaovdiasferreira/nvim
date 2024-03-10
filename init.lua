@@ -58,9 +58,16 @@ require("lazy").setup({
      'hrsh7th/nvim-cmp',
   --snips
      'L3MON4D3/LuaSnip',
-     'saadparwaiz1/cmp_luasnip',
-     'rafamadriz/friendly-snippets',
-},
+		 'saadparwaiz1/cmp_luasnip',
+     'rafamadriz/friendly-snippets'
+	 },
+
+--nvim-tree
+	{
+		'nvim-tree/nvim-tree.lua',
+		'nvim-tree/nvim-web-devicons',
+	},
+
 
 
 })
@@ -70,7 +77,7 @@ vim.cmd[[colorscheme tokyonight]]
 
 require("core.plugins-config.mason")
 require("core.plugins-config.cmp")
-require("luasnip.loaders.from_vscode").lazy_load()
 require("core.settings")
 require("core.plugins-config.dap")
 require("core.plugins-config.dapui")
+require("core.plugins-config.nvim-tree")
