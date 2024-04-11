@@ -68,9 +68,13 @@ require("lazy").setup({
 		'nvim-tree/nvim-web-devicons',
 	},
 
-
+--lualine
+	{
+			'nvim-lualine/lualine.nvim',
+	}
 
 })
+require('lualine').setup()
 
 --set theme
 vim.cmd[[colorscheme tokyonight]]

@@ -34,3 +34,11 @@ dap.configurations.cpp = {
 }
 
 dap.configurations.c = dap.configurations.cpp
+local n = "n"
+vim.keymap.set(n, '<leader>dk', function() require('dap').continue() end)
+vim.keymap.set(n, '<leader>dl', function() require('dap').run_last() end)
+vim.keymap.set(n, '<leader>b', function() require('dap').toggle_breakpoint() end)
+vim.keymap.set(n, '<leader>si', function() require('dap').step_into() end)
+vim.keymap.set(n, '<leader>so', function() require('dap').step_out() end)
+
+
